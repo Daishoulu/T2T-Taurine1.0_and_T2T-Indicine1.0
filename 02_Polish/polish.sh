@@ -10,7 +10,6 @@ minimap2 --secondary=no -t 40 -ax map-hifi genome.fasta hifi.fq.gz | samtools so
 # 2. Index the sorted BAM file for downstream tools
 samtools index aln.sort.bam
 
-
 # 3. Count k-mers from NGS reads (k=21)
 yak count -b37 -t 20 -k 21 -o k21.yak <(cat NGS.fastq) <(cat NGS.fastq)
 
